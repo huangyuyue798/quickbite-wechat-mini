@@ -1,0 +1,5 @@
+<view class="stepper">
+  <view class="op-btn {{count <= min ? 'op-disabled' : ''}}" catchtap="onMinus">−</view>
+  <view class="count">{{count}}</view>
+  <view class="add-btn" catchtap="onPlus">+</view>
+</view>

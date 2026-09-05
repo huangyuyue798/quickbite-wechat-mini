@@ -1,0 +1,20 @@
+<view class="shop-card" bindtap="onTap">
+  <view class="logo">
+    <text wx:if="{{!shop.logo}}" class="logo-text">{{shop.name[0]}}</text>
+    <image wx:else src="{{shop.logo}}" mode="aspectFill" class="logo-img" />
+  </view>
+  <view class="info">
+    <view class="name ellipsis">{{shop.name}}</view>
+    <view class="desc ellipsis">{{shop.description}}</view>
+    <view class="meta">
+      <text class="rating">★ {{shop.rating}}</text>
+      <text>月售{{shop.monthly_sales}}</text>
+      <text>配送费 ¥{{shop.delivery_fee}}</text>
+    </view>
+    <view class="meta">
+      <text>起送 ¥{{shop.min_price}}</text>
+      <text>约{{shop.delivery_time}}分钟</text>
+      <text class="tag">{{shop.category}}</text>
+    </view>
+  </view>
+</view>

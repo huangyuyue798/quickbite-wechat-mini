@@ -1,0 +1,16 @@
+<view class="cart-bar">
+  <view class="cart-icon-wrap">
+    <view class="cart-icon">🛒</view>
+    <view wx:if="{{totalCount > 0}}" class="badge">{{totalCount > 99 ? '99+' : totalCount}}</view>
+  </view>
+  <view class="total">
+    <block wx:if="{{totalCount > 0}}">
+      <text class="total-symbol">¥</text>
+      <text class="total-value">{{totalPrice}}</text>
+    </block>
+    <text wx:else class="total-empty">购物车是空的</text>
+  </view>
+  <view class="action {{disabled ? 'action-disabled' : ''}}" bindtap="onAction">
+    {{actionText}}
+  </view>
+</view>

@@ -1,0 +1,42 @@
+.stepper {
+  display: flex;
+  align-items: center;
+}
+
+.op-btn {
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  border: 2rpx solid #ff6b35;
+  color: #ff6b35;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.op-disabled {
+  border-color: #ddd;
+  color: #ccc;
+}
+
+.count {
+  font-size: 28rpx;
+  color: #333;
+  margin: 0 16rpx;
+  min-width: 40rpx;
+  text-align: center;
+}
+
+.add-btn {
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8a3d, #ff6b35);
+  color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

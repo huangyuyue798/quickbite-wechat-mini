@@ -1,0 +1,23 @@
+<view class="goods-card">
+  <view class="goods-img">
+    <text wx:if="{{!goods.image}}" class="img-emoji">{{goods.emoji || '🍽️'}}</text>
+    <image wx:else src="{{goods.image}}" mode="aspectFill" class="img-real" />
+  </view>
+  <view class="goods-info">
+    <view class="goods-name ellipsis-2">{{goods.name}}</view>
+    <view class="goods-desc ellipsis-2">{{goods.description}}</view>
+    <view class="goods-sales">月售{{goods.sales}} · 库存{{goods.stock}}</view>
+    <view class="goods-bottom">
+      <view class="price">
+        <text class="price-symbol">¥</text>
+        <text class="price-value">{{goods.price}}</text>
+        <text wx:if="{{goods.original_price > goods.price}}" class="origin">¥{{goods.original_price}}</text>
+      </view>
+      <view class="stepper-wrap">
+        <view wx:if="{{count > 0}}" class="op-btn" catchtap="onMinus">−</view>
+        <text wx:if="{{count > 0}}" class="count">{{count}}</text>
+        <view class="add-btn" catchtap="onAdd">+</view>
+      </view>
+    </view>
+  </view>
+</view>
