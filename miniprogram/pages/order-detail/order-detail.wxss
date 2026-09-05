@@ -1,0 +1,137 @@
+.page {
+  padding-bottom: 160rpx;
+}
+
+.status-header {
+  background: linear-gradient(135deg, #ff8a3d, #ff6b35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 32rpx;
+}
+
+.status-icon {
+  font-size: 72rpx;
+  margin-right: 24rpx;
+}
+
+.status-text {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.status-sub {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  opacity: 0.92;
+}
+
+.addr-name {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.addr-phone {
+  font-size: 26rpx;
+  color: #666;
+  font-weight: 400;
+  margin-left: 16rpx;
+}
+
+.addr-detail {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 12rpx;
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid #f2f3f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-link {
+  font-size: 24rpx;
+  color: #ff6b35;
+  font-weight: 400;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.item-name {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.item-count {
+  font-size: 26rpx;
+  color: #999;
+  margin: 0 24rpx;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #666;
+  padding: 12rpx 0;
+}
+
+.total-row {
+  border-top: 2rpx solid #f2f3f5;
+  margin-top: 8rpx;
+  padding-top: 20rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.remark-row {
+  color: #333;
+}
+
+.remark-row text:last-child {
+  max-width: 60%;
+  text-align: right;
+}
+
+.info-card .fee-row text:last-child {
+  color: #333;
+  max-width: 60%;
+  word-break: break-all;
+  text-align: right;
+}
+
+.action-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  box-shadow: 0 -4rpx 16rpx rgba(0, 0, 0, 0.06);
+  z-index: 20;
+}
+
+.action-bar .btn-plain {
+  margin-right: 20rpx;
+}
+
+.action-primary {
+  background: linear-gradient(90deg, #ff8a3d, #ff6b35);
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 600;
+  border-radius: 44rpx;
+  padding: 16rpx 48rpx;
+}

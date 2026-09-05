@@ -1,0 +1,48 @@
+<view class="page">
+  <!-- 未登录 -->
+  <empty wx:if="{{!loggedIn && !loading}}" text="登录后查看订单" btnText="去登录" bind:action="goLogin" />
+
+  <block wx:else>
+    <!-- 状态 tab -->
+    <view class="tab-bar">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="key"
+        class="tab-item {{activeTab === item.key ? 'tab-active' : ''}}"
+        data-key="{{item.key}}"
+        bindtap="onTabTap"
+      >{{item.label}}</view>
+    </view>
+
+    <!-- 订单列表 -->
+    <view class="order-list">
+      <view
+        wx:for="{{orders}}"
+        wx:key="id"
+        class="card order-card"
+        bindtap="goDetail"
+        data-id="{{item.id}}"
+      >
+        <view class="order-head">
+          <view class="order-shop">{{item.shop_name}}</view>
+          <view class="order-status status-{{item.status}}">{{item.statusText}}</view>
+        </view>
+        <view class="order-body">
+          <view class="order-amount">
+            <text class="price price-symbol">¥</text>
+            <text class="price order-total">{{item.total_price}}</text>
+          </view>
+          <view class="order-meta">
+            <text>含配送费 ¥{{item.delivery_fee}}</text>
+          </view>
+        </view>
+        <view class="order-foot">
+          <text class="order-time">{{formatTime(item.created_at)}}</text>
+          <text class="order-no">订单号 {{item.order_no}}</text>
+        </view>
+      </view>
+    </view>
+
+    <empty wx:if="{{!loading && !orders.length}}" text="暂无相关订单" btnText="去点餐" bind:action="goHome" />
+  </block>
+</view>

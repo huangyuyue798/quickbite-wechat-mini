@@ -1,0 +1,108 @@
+.tab-bar {
+  display: flex;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  padding: 22rpx 0;
+  position: relative;
+}
+
+.tab-active {
+  color: #ff6b35;
+  font-weight: 700;
+}
+
+.tab-active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 48rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  background: #ff6b35;
+}
+
+.order-list {
+  padding-bottom: 40rpx;
+}
+
+.order-card {
+  padding: 24rpx;
+}
+
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid #f2f3f5;
+}
+
+.order-shop {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.order-status {
+  font-size: 26rpx;
+}
+
+.status-pending {
+  color: #ff6b35;
+}
+
+.status-paid {
+  color: #1677ff;
+}
+
+.status-delivering {
+  color: #faad14;
+}
+
+.status-completed {
+  color: #52c41a;
+}
+
+.status-cancelled {
+  color: #999;
+}
+
+.order-body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+
+.order-amount {
+  color: #ff3b30;
+}
+
+.order-total {
+  font-size: 44rpx;
+}
+
+.order-meta {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.order-foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #bbb;
+  padding-top: 12rpx;
+  border-top: 2rpx solid #f7f8fa;
+}
