@@ -1,0 +1,79 @@
+.page {
+  padding-bottom: 180rpx;
+}
+
+.addr-card {
+  padding: 24rpx;
+}
+
+.addr-name {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.addr-phone {
+  font-size: 26rpx;
+  color: #666;
+  font-weight: 400;
+  margin-left: 16rpx;
+}
+
+.default-tag {
+  font-size: 22rpx;
+  color: #ff6b35;
+  background: #fff3e8;
+  border-radius: 8rpx;
+  padding: 2rpx 12rpx;
+  margin-left: 12rpx;
+  font-weight: 400;
+}
+
+.addr-detail {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 12rpx;
+  line-height: 1.5;
+}
+
+.addr-tag {
+  display: inline-block;
+  font-size: 22rpx;
+  color: #999;
+  background: #f5f6f8;
+  border-radius: 8rpx;
+  padding: 2rpx 14rpx;
+  margin-top: 12rpx;
+}
+
+.addr-ops {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 2rpx solid #f7f8fa;
+  margin-top: 20rpx;
+  padding-top: 16rpx;
+}
+
+.op-item {
+  font-size: 26rpx;
+  color: #666;
+  margin-left: 40rpx;
+}
+
+.op-danger {
+  color: #ff3b30;
+}
+
+.add-btn-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -4rpx 16rpx rgba(0, 0, 0, 0.06);
+}
+
+.add-btn {
+  width: 100%;
+  box-sizing: border-box;
+}

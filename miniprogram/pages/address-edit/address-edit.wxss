@@ -1,0 +1,75 @@
+.page {
+  padding-bottom: 160rpx;
+}
+
+.form-card {
+  padding: 0 24rpx;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+  border-bottom: 2rpx solid #f7f8fa;
+}
+
+.form-row:last-child {
+  border-bottom: none;
+}
+
+.form-label {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.form-input {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.form-picker {
+  flex: 1;
+}
+
+.picker-value {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.tag-group {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-item {
+  font-size: 24rpx;
+  color: #666;
+  background: #f5f6f8;
+  border-radius: 24rpx;
+  padding: 8rpx 28rpx;
+  margin: 0 16rpx 12rpx 0;
+}
+
+.tag-active {
+  background: #fff3e8;
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+.save-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -4rpx 16rpx rgba(0, 0, 0, 0.06);
+}
+
+.save-btn {
+  width: 100%;
+  box-sizing: border-box;
+}

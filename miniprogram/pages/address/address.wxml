@@ -1,0 +1,32 @@
+<view class="page">
+  <empty wx:if="{{!loading && !addresses.length}}" text="还没有收货地址" btnText="去添加" bind:action="onAdd" />
+
+  <view class="addr-list">
+    <view
+      wx:for="{{addresses}}"
+      wx:key="id"
+      class="card addr-card"
+      bindtap="onSelect"
+      data-id="{{item.id}}"
+    >
+      <view class="addr-main">
+        <view class="addr-name">
+          {{item.name}}
+          <text class="addr-phone">{{item.phone}}</text>
+          <text wx:if="{{item.is_default}}" class="default-tag">默认</text>
+        </view>
+        <view class="addr-detail">{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
+        <view class="addr-tag">{{item.tag}}</view>
+      </view>
+      <view class="addr-ops" catchtap="noop">
+        <view class="op-item" catchtap="onEdit" data-id="{{item.id}}">编辑</view>
+        <view class="op-item" wx:if="{{!item.is_default}}" catchtap="onSetDefault" data-id="{{item.id}}">设为默认</view>
+        <view class="op-item op-danger" catchtap="onDelete" data-id="{{item.id}}">删除</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="add-btn-wrap">
+    <view class="btn-primary add-btn" bindtap="onAdd">＋ 新增收货地址</view>
+  </view>
+</view>
