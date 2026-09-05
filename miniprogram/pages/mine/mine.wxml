@@ -1,0 +1,40 @@
+<view class="page">
+  <!-- 用户信息 -->
+  <view class="user-header" bindtap="onUserTap">
+    <view class="avatar">
+      <text wx:if="{{!userInfo || !userInfo.nickname}}">?</text>
+      <text wx:else>{{userInfo.nickname[0]}}</text>
+    </view>
+    <view class="user-info">
+      <view class="nickname">{{userInfo ? userInfo.nickname : '未登录'}}</view>
+      <view class="sub">{{userInfo ? '欢迎回来，开始点餐吧' : '登录后享受快捷点餐'}}</view>
+    </view>
+    <text class="arrow">›</text>
+  </view>
+
+  <!-- 菜单 -->
+  <view class="card menu">
+    <view class="menu-item" bindtap="goOrders">
+      <text class="menu-icon">📋</text>
+      <text class="menu-text">我的订单</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item" bindtap="goAddress">
+      <text class="menu-icon">📍</text>
+      <text class="menu-text">收货地址</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item" bindtap="goIndex">
+      <text class="menu-icon">🍔</text>
+      <text class="menu-text">去点餐</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item" bindtap="showAbout">
+      <text class="menu-icon">ℹ️</text>
+      <text class="menu-text">关于项目</text>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <view wx:if="{{loggedIn}}" class="logout" bindtap="logout">退出登录</view>
+</view>

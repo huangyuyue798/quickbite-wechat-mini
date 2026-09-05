@@ -1,0 +1,16 @@
+<view class="page">
+  <view class="login-hero">
+    <view class="hero-icon">🍔</view>
+    <view class="hero-title">QuickBite 点餐</view>
+    <view class="hero-sub">登录后即可下单，美味送到手</view>
+  </view>
+
+  <view class="login-btns">
+    <view class="btn-primary login-btn {{loading ? 'btn-disabled' : ''}}" bindtap="onWechatLogin">
+      {{loading ? '登录中...' : '微信一键登录'}}
+    </view>
+    <view class="dev-btn" bindtap="onDevLogin">开发环境模拟登录</view>
+  </view>
+
+  <view class="login-tip">登录即代表同意《用户协议》与《隐私政策》</view>
+</view>

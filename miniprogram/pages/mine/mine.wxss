@@ -1,0 +1,82 @@
+.user-header {
+  background: linear-gradient(135deg, #ff8a3d, #ff6b35);
+  display: flex;
+  align-items: center;
+  padding: 60rpx 40rpx;
+  color: #fff;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52rpx;
+  font-weight: 700;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.user-info {
+  flex: 1;
+  margin-left: 24rpx;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.sub {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  opacity: 0.9;
+}
+
+.arrow {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 40rpx;
+}
+
+.menu {
+  padding: 0 24rpx;
+  margin-top: 24rpx;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #f7f8fa;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-icon {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+
+.menu-text {
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.menu .arrow {
+  color: #ccc;
+}
+
+.logout {
+  text-align: center;
+  color: #ff3b30;
+  font-size: 28rpx;
+  background: #fff;
+  margin: 40rpx 20rpx 0;
+  border-radius: 16rpx;
+  padding: 26rpx 0;
+}
