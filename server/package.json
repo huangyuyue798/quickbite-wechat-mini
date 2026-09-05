@@ -1,0 +1,29 @@
+{
+  "name": "quickbite-server",
+  "version": "1.0.0",
+  "description": "QuickBite 外卖点餐小程序后端服务（Node.js + Express + MySQL）",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "wechat",
+    "miniprogram",
+    "express",
+    "mysql",
+    "waimai"
+  ],
+  "author": "huangyuyue798",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
