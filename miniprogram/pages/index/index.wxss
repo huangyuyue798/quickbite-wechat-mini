@@ -1,0 +1,85 @@
+.banner {
+  background: linear-gradient(135deg, #ff8a3d, #ff6b35);
+  padding: 48rpx 40rpx 72rpx;
+  color: #fff;
+}
+
+.banner-title {
+  font-size: 44rpx;
+  font-weight: 700;
+}
+
+.banner-sub {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  opacity: 0.9;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: -36rpx 24rpx 0;
+  position: relative;
+  z-index: 10;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 44rpx;
+  padding: 16rpx 28rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+
+.search-icon {
+  font-size: 28rpx;
+  margin-right: 12rpx;
+}
+
+.search-input {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.search-btn {
+  color: #fff;
+  font-size: 28rpx;
+  margin-left: 24rpx;
+  font-weight: 600;
+}
+
+.cat-bar {
+  white-space: nowrap;
+  margin-top: 24rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.cat-item {
+  display: inline-block;
+  font-size: 26rpx;
+  color: #666;
+  padding: 12rpx 32rpx;
+  background: #fff;
+  border-radius: 36rpx;
+  margin-right: 16rpx;
+}
+
+.cat-active {
+  background: linear-gradient(90deg, #ff8a3d, #ff6b35);
+  color: #fff;
+  font-weight: 600;
+}
+
+.shop-list {
+  margin-top: 24rpx;
+}
+
+.loading-text {
+  text-align: center;
+  color: #999;
+  padding: 40rpx 0;
+  font-size: 26rpx;
+}

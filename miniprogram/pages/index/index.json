@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "QuickBite 点餐",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "shop-card": "/components/shop-card/shop-card",
+    "empty": "/components/empty/empty"
+  }
+}

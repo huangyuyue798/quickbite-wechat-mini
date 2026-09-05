@@ -1,0 +1,47 @@
+<view class="page">
+  <!-- 顶部渐变横幅 -->
+  <view class="banner">
+    <view class="banner-title">🍔 QuickBite 点餐</view>
+    <view class="banner-sub">校园周边美食，30 分钟送达</view>
+  </view>
+
+  <!-- 搜索区 -->
+  <view class="search-bar">
+    <view class="search-box">
+      <text class="search-icon">🔍</text>
+      <input
+        class="search-input"
+        value="{{keyword}}"
+        placeholder="搜索店铺，如 奶茶 / 快餐"
+        confirm-type="search"
+        bindinput="onSearchInput"
+        bindconfirm="onSearch"
+      />
+    </view>
+    <view class="search-btn" bindtap="onSearch">搜索</view>
+  </view>
+
+  <!-- 分类 -->
+  <scroll-view class="cat-bar" scroll-x enable-flex>
+    <view
+      wx:for="{{categories}}"
+      wx:key="*this"
+      class="cat-item {{activeCategory === item ? 'cat-active' : ''}}"
+      data-category="{{item}}"
+      bindtap="onCategoryTap"
+    >{{item}}</view>
+  </scroll-view>
+
+  <!-- 店铺列表 -->
+  <view class="shop-list">
+    <shop-card
+      wx:for="{{shops}}"
+      wx:key="id"
+      shop="{{item}}"
+      bind:tapshop="onTapShop"
+    />
+  </view>
+
+  <empty wx:if="{{!loading && !shops.length}}" text="没有找到相关店铺" />
+  <view wx:if="{{loading}}" class="loading-text">加载中...</view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "店铺",
+  "usingComponents": {
+    "goods-card": "/components/goods-card/goods-card",
+    "cart-bar": "/components/cart-bar/cart-bar",
+    "stepper": "/components/stepper/stepper",
+    "empty": "/components/empty/empty"
+  }
+}

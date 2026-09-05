@@ -1,0 +1,75 @@
+<view class="page">
+  <!-- 店铺头部 -->
+  <view class="shop-header">
+    <view class="logo">
+      <text wx:if="{{!shop.logo}}" class="logo-text">{{shop.name[0]}}</text>
+      <image wx:else src="{{shop.logo}}" mode="aspectFill" class="logo-img" />
+    </view>
+    <view class="header-info">
+      <view class="shop-name ellipsis">{{shop.name}}</view>
+      <view class="shop-meta">★ {{shop.rating}} · 月售{{shop.monthly_sales}}</view>
+      <view class="shop-meta">配送费 ¥{{shop.delivery_fee}} · 起送 ¥{{shop.min_price}} · 约{{shop.delivery_time}}分钟</view>
+    </view>
+  </view>
+  <view wx:if="{{shop.notice}}" class="shop-notice">📢 {{shop.notice}}</view>
+
+  <!-- 分类 + 商品 -->
+  <view class="body">
+    <scroll-view class="cat-side" scroll-y>
+      <view
+        wx:for="{{categories}}"
+        wx:key="id"
+        class="side-item {{activeCatId === item.id ? 'side-active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="onCatTap"
+      >{{item.name}}</view>
+    </scroll-view>
+
+    <scroll-view class="goods-side" scroll-y>
+      <goods-card
+        wx:for="{{goods}}"
+        wx:key="id"
+        goods="{{item}}"
+        count="{{cartMap[item.id] || 0}}"
+        bind:add="onAdd"
+        bind:minus="onMinus"
+      />
+      <empty wx:if="{{!goods.length}}" text="该分类暂无商品" />
+    </scroll-view>
+  </view>
+
+  <!-- 底部购物车栏 -->
+  <view class="bar-fixed">
+    <cart-bar
+      totalCount="{{totalCount}}"
+      totalPrice="{{totalPrice}}"
+      actionText="去结算"
+      disabled="{{totalCount === 0}}"
+      bind:action="onCheckout"
+    />
+  </view>
+
+  <!-- 购物车弹层遮罩 -->
+  <view wx:if="{{showCartPanel}}" class="mask" bindtap="closePanel"></view>
+
+  <!-- 购物车弹层 -->
+  <view class="panel {{showCartPanel ? 'panel-show' : ''}}">
+    <view class="panel-head">
+      <text class="panel-title">已选商品</text>
+      <text class="panel-close" bindtap="closePanel">✕</text>
+    </view>
+    <scroll-view scroll-y class="panel-list">
+      <view wx:for="{{cartList}}" wx:key="cartId" class="panel-item">
+        <view class="panel-name ellipsis">{{item.name}}</view>
+        <view class="panel-price">¥{{item.price}}</view>
+        <stepper
+          count="{{item.count}}"
+          max="{{item.stock}}"
+          data-goods="{{item}}"
+          bind:change="onPanelChange"
+        />
+      </view>
+      <empty wx:if="{{!cartList.length}}" text="还没有选商品哦" />
+    </scroll-view>
+  </view>
+</view>
