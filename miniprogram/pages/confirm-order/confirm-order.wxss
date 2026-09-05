@@ -1,0 +1,140 @@
+.page {
+  padding-bottom: 140rpx;
+}
+
+.address-card {
+  position: relative;
+}
+
+.addr-name {
+  font-size: 30rpx;
+  font-weight: 700;
+  padding-right: 60rpx;
+}
+
+.addr-phone {
+  font-size: 26rpx;
+  color: #666;
+  font-weight: 400;
+  margin-left: 16rpx;
+}
+
+.addr-detail {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 12rpx;
+  padding-right: 60rpx;
+}
+
+.addr-empty {
+  font-size: 30rpx;
+  color: #ff6b35;
+}
+
+.addr-tag {
+  position: absolute;
+  right: 60rpx;
+  top: 24rpx;
+  background: #fff3e8;
+  color: #ff6b35;
+  font-size: 22rpx;
+  border-radius: 8rpx;
+  padding: 4rpx 12rpx;
+}
+
+.arrow {
+  position: absolute;
+  right: 24rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 40rpx;
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid #f2f3f5;
+  margin-bottom: 8rpx;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.item-name {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.item-count {
+  font-size: 26rpx;
+  color: #999;
+  margin: 0 24rpx;
+}
+
+.item-price {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #666;
+  padding: 16rpx 0 0;
+}
+
+.remark-input {
+  width: 100%;
+  height: 140rpx;
+  font-size: 26rpx;
+  margin-top: 16rpx;
+  box-sizing: border-box;
+}
+
+.submit-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  box-shadow: 0 -4rpx 16rpx rgba(0, 0, 0, 0.06);
+  z-index: 20;
+}
+
+.total-info {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.total-label {
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 12rpx;
+}
+
+.total-value {
+  font-size: 48rpx;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #ff8a3d, #ff6b35);
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  border-radius: 44rpx;
+  padding: 22rpx 80rpx;
+}
+
+.btn-disabled {
+  opacity: 0.6;
+}

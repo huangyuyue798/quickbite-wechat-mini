@@ -1,0 +1,47 @@
+<view class="page">
+  <!-- 未登录 -->
+  <empty wx:if="{{!loggedIn && !loading}}" text="登录后查看购物车" btnText="去登录" bind:action="goLogin" />
+
+  <!-- 空购物车 -->
+  <empty wx:elif="{{!cartGroups.length && !loading}}" text="购物车还是空的" btnText="去逛逛" bind:action="goHome" />
+
+  <!-- 购物车列表 -->
+  <view wx:else class="cart-list">
+    <view wx:for="{{cartGroups}}" wx:key="shopId" class="card shop-group">
+      <view class="group-head">
+        <view class="group-name" bindtap="goShop" data-id="{{item.shopId}}">{{item.shopName}} ›</view>
+        <view class="group-total">小计 <text class="price">¥{{item.goodsAmount}}</text></view>
+      </view>
+
+      <view
+        wx:for="{{item.goods}}"
+        wx:for-item="g"
+        wx:key="cartId"
+        class="cart-item"
+      >
+        <view class="cart-img">
+          <text wx:if="{{!g.image}}">🍽️</text>
+          <image wx:else src="{{g.image}}" mode="aspectFill" class="cart-img-real" />
+        </view>
+        <view class="cart-info">
+          <view class="cart-name ellipsis">{{g.name}}</view>
+          <view class="cart-desc">¥{{g.price}}/{{g.unit}}</view>
+        </view>
+        <stepper
+          count="{{g.count}}"
+          max="{{g.stock}}"
+          data-group="{{item.shopId}}"
+          data-cart="{{g}}"
+          bind:change="onChange"
+        />
+      </view>
+
+      <view class="group-actions">
+        <view class="btn-plain" bindtap="goShop" data-id="{{item.shopId}}">去店铺加菜</view>
+        <view class="checkout-btn" bindtap="checkout" data-id="{{item.shopId}}">去结算</view>
+      </view>
+    </view>
+
+    <view class="clear-all" bindtap="clearAll">🗑 清空购物车</view>
+  </view>
+</view>

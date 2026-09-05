@@ -1,0 +1,52 @@
+<view class="page">
+  <!-- 收货地址 -->
+  <view class="card address-card" bindtap="onSelectAddress">
+    <block wx:if="{{address}}">
+      <view class="addr-name">{{address.name}} <text class="addr-phone">{{address.phone}}</text></view>
+      <view class="addr-detail">{{address.province}}{{address.city}}{{address.district}}{{address.detail}}</view>
+      <view class="addr-tag" wx:if="{{address.is_default}}">默认</view>
+    </block>
+    <block wx:else>
+      <view class="addr-empty">＋ 请选择收货地址</view>
+    </block>
+    <text class="arrow">›</text>
+  </view>
+
+  <!-- 商品清单 -->
+  <view class="card">
+    <view class="section-title">{{shop.name}}</view>
+    <view wx:for="{{goods}}" wx:key="cartId" class="order-item">
+      <view class="item-name ellipsis">{{item.name}}</view>
+      <view class="item-count">×{{item.count}}</view>
+      <view class="item-price">¥{{formatPrice(item.price * item.count)}}</view>
+    </view>
+    <view class="fee-row">
+      <text>配送费</text>
+      <text>¥{{deliveryFee}}</text>
+    </view>
+  </view>
+
+  <!-- 备注 -->
+  <view class="card">
+    <view class="section-title">订单备注</view>
+    <textarea
+      class="remark-input"
+      placeholder="口味偏好、少辣多辣等（选填）"
+      value="{{remark}}"
+      bindinput="onRemarkInput"
+      maxlength="100"
+    />
+  </view>
+
+  <!-- 底部提交栏 -->
+  <view class="submit-bar">
+    <view class="total-info">
+      <text class="total-label">合计</text>
+      <text class="price price-symbol">¥</text>
+      <text class="price total-value">{{totalPrice}}</text>
+    </view>
+    <view class="submit-btn {{submitting ? 'btn-disabled' : ''}}" bindtap="onSubmit">
+      {{submitting ? '提交中...' : '提交订单'}}
+    </view>
+  </view>
+</view>
