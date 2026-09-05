@@ -1,0 +1,77 @@
+/* 全局样式 */
+page {
+  background: #f5f6f8;
+  font-size: 28rpx;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+/* 通用卡片 */
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  margin: 20rpx;
+  padding: 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+
+/* 主按钮 */
+.btn-primary {
+  background: linear-gradient(90deg, #ff8a3d, #ff6b35);
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.btn-primary.btn-disabled {
+  background: #ffc9ad;
+}
+
+/* 次按钮 */
+.btn-plain {
+  border: 2rpx solid #ff6b35;
+  color: #ff6b35;
+  border-radius: 44rpx;
+  font-size: 28rpx;
+  text-align: center;
+  padding: 14rpx 40rpx;
+  background: #fff;
+}
+
+/* 单行省略 */
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 两行省略 */
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 价格样式 */
+.price {
+  color: #ff3b30;
+  font-weight: 700;
+}
+
+.price-symbol {
+  font-size: 24rpx;
+}
+
+.price-value {
+  font-size: 36rpx;
+}
+
+/* 空状态通用间距 */
+.page-empty {
+  padding-top: 200rpx;
+}
